@@ -1,0 +1,353 @@
+/* Reset for consistent styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body styling with background gradient */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #141E30, #243B55);
+    color: #e0e0e0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background overlay with subtle texture and color overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png'), 
+                linear-gradient(135deg, #0f0f0f 15%, #ff4c4c 85%);
+    opacity: 0.15;
+    z-index: -1;
+    filter: blur(3px);
+}
+
+/* Main login container with a glassy effect */
+.login-container {
+    background: rgba(17, 25, 40, 0.85);
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Header with logo and title */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #ff4c4c;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: rotate(12deg) scale(1.1);
+}
+
+.login-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+/* Title styling */
+.title {
+    font-size: 26px;
+    color: #e0e0e0;
+    text-shadow: 0px 0px 6px rgba(255, 76, 76, 0.7);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input container for password visibility toggle */
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Password input field styling */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    padding-right: 45px; /* Space for the eye icon */
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #222;
+    color: #e0e0e0;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-field:focus {
+    border-color: #ff4c4c;
+    box-shadow: 0 0 8px rgba(255, 76, 76, 0.5);
+}
+
+.input-field::placeholder {
+    color: #888;
+}
+
+/* Toggle button for password visibility */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    color: #888;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.toggle-password:hover {
+    color: #ff4c4c;
+    transform: scale(1.1);
+}
+
+/* Animated eye icon */
+#password-icon {
+    transition: transform 0.3s ease;
+}
+
+.show-password #password-icon {
+    transform: rotate(180deg);
+}
+
+/* Submit button with animation */
+.submit-btn {
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff4c4c, #ff6464);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #ff6464, #ff1e1e);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 30, 30, 0.5);
+}
+
+/* Error message styling */
+#message {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #ff647c;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Buy Key button with smooth gradient */
+.buy-btn {
+    padding: 12px 40px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ff4c4c, #ff6464);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.buy-btn:hover {
+    background: linear-gradient(135deg, #ff1e1e, #ff4c4c);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 30, 30, 0.5);
+}
+.join-btn {
+    padding: 12px 40px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ff4c4c, #ff6464);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.join-btn:hover {
+    background: linear-gradient(135deg, #ff1e1e, #ff4c4c);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 30, 30, 0.5);
+}
+
+/* Notification banner styling */
+.maintenance-notification {
+    display: none;
+    background-color: #ffcc00;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* General Reset and Styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #141E30;
+    color: #FFF;
+    overflow: hidden;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Password Input Styling */
+.input-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+.password-input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    font-size: 1rem;
+    background: #222;
+    color: #FFF;
+    transition: border 0.3s ease;
+}
+
+.password-input:focus {
+    border-color: #ff4c4c;
+}
+
+/* Eye Icon and Lid Styling */
+.eye-container {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.eye-lid {
+    position: absolute;
+    width: 1.6rem;
+    height: 0.1rem;
+    background-color: #ff4c4c;
+    top: 0.6rem;
+    border-radius: 50%;
+    transform-origin: center;
+    transform: scaleY(0);
+}
+
+#eyeIcon {
+    font-size: 1.6rem;
+    color: #888;
+    transition: color 0.3s;
+}
+
+/* Strength Meter Styling */
+.strength-meter {
+    width: 100%;
+    height: 5px;
+    background: #444;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+/* Meta Links Styling */
+.meta-links {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.meta-links a {
+    color: #ff4c4c;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.meta-links a:hover {
+    color: #ff7878;
+}
