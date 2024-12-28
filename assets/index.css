@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
+    background: #121212;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(135deg, #1d1d1d 25%, #f21723 100%);
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.login-container {
+    text-align: center;
+    background: #0f1620;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(15, 22, 32, 255);
+}
+
+/* New Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    border-radius: 0%;
+    border: 0px solid #e0e0e0;
+}
+
+.login-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #e0e0e0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #333;
+    outline: none;
+    color: #e0e0e0;
+}
+
+.input-field::placeholder {
+    color: #888;
+}
+
+.submit-btn {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #000;
+    background-color: #ff4c4c;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #ff1e1e;
+    transform: scale(1.05);
+}
+
+#message {
+    margin-top: 20px;
+    color: #ff647c; /* Error message color */
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Styles for the Buy Key Button */
+.buy-btn {
+    padding: 1em 8em;
+    margin-top: 10px;
+    background-color: #ff4c4c; /* Red background */
+    color: #000; /* Black text */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #ff1e1e; /* Darker red on hover */
+    transform: scale(1.05); /* Slight increase in size */
+}

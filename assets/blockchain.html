@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+  <title>CRYPTO SCARLET</title>
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+  <meta name="msapplication-tap-highlight" content="no" />
+  <link rel="manifest" href="assets/manifest.json" />
+  <meta name="theme-color" content="#31d53d" />
+  <script type="module" crossorigin src="index.d7d9fc52.js"></script>
+  <link rel="stylesheet" href="index.103a212e.css">
+  <style>
+    img {
+      pointer-events: none; /* Disables click and hover events */
+      user-select: none; /* Prevents text selection */
+      -webkit-user-drag: none; /* Prevents drag */
+    }
+  </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <img src="logo.83b81541.png" class="logo logo__abs" alt="Logo">
+            <div class="header__item logo__item">
+                <img src="logo.83b81541.png" class="logo" alt="Logo">
+            </div>
+            <div class="header__item menu">
+                <button class="menu__item" id="btn_dashboard_page">
+                    <img src="dashboard_icon.svg" alt="Dashboard Icon" />
+                    <span>Dashboard</span>
+                </button>
+                <button class="menu__item active" id="btn_search_page">
+                    <img src="search_icon.svg" alt="Search Icon" />
+                    <span>Search</span>
+                </button>
+                <button class="menu__item" id="btn_settings_page">
+                    <img src="settings_icon.svg" alt="Settings Icon" />
+                    <span>Settings</span>
+                </button>
+            </div>
+        </div>
+        <div class="coinswitcher">
+            <button class="coin__item active" id="coin_btc">
+                <img src="btc_icon.svg" alt="BTC Icon" />
+                <span>BTC</span>
+            </button>
+            <button class="coin__item" id="coin_eth">
+                <img src="eth_icon.svg" alt="ETH Icon" />
+                <span>ETH</span>
+            </button>
+            <button class="coin__item" id="coin_bnb">
+                <img src="bnb_icon.svg" alt="BNB Icon" />
+                <span>BNB</span>
+            </button>
+            <button class="coin__item" id="coin_sol">
+                <img src="sol.png">
+                <span>SOL</span>
+            </button>
+            <button class="coin__item" id="coin_multi">
+                <img src="multi.2b4e1302.png" alt="Multicoin Icon">
+                <span>Multicoin</span>
+            </button>
+        </div>
+    <div class="search" id="network_btc_search">
+      <div class="search__process">
+        <div class="search__info">
+          <img src="check.png" alt="search">
+          <span id="checked_num_btc">Checked: 0</span>
+        </div>
+        <div class="search__console btc__text" id="search_console_btc">
+          <p class="default">There will be logs here...</p>
+          <!-- <p class="successful">Balance: 0 || Wallet check: apple water sofa chill don't...</p> -->
+        </div>
+        <div class="search__control">
+          <button class="btn stop" id="stop_btc">STOP SEARCH</button>
+          <button class="btn start" id="start_btc">START SEARCH</button>
+        </div>
+      </div>
+      <div class="arrow__box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="6" viewBox="0 0 17 6" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.113281L17 3.00003L12 5.88678V3.50003H0V2.50003H12V0.113281Z" fill="white" />
+        </svg>
+      </div>
+      <div class="search__results">
+        <div class="search__info">
+            <img src="wallet.png" alt="wallet">
+          <span id="found_num_btc">Found: 0</span>
+        </div>
+        <div class="search__console result__list" id="found_console_btc">
+          <!-- <p class="successful">Balance: 0 || Wallet check: apple water sofa chill don't...</p> -->
+          <p class="successful default" id="found_defaul_txt_btc">You haven't found any wallets yet...</p>
+        </div>
+        <div class="search__control">
+          <button class="btn btn__main" id="withdraw_btc">WITHDRAW</button>
+          <button class="btn start" id="clear_found_btc">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div class="search" id="network_eth_search">
+      <div class="search__process">
+        <div class="search__info">
+          <img src="check.png" alt="search">
+          <span id="checked_num_eth">Checked: 0</span>
+        </div>
+        <div class="search__console eth__text" id="search_console_eth">
+          <p class="default">There will be logs here...</p>
+          <!-- <p class="successful">Balance: 0 || Wallet check: apple water sofa chill don't...</p> -->
+        </div>
+        <div class="search__control">
+          <button class="btn stop" id="stop_eth">STOP SEARCH</button>
+          <button class="btn start" id="start_eth">START SEARCH</button>
+        </div>
+      </div>
+      <div class="arrow__box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="6" viewBox="0 0 17 6" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.113281L17 3.00003L12 5.88678V3.50003H0V2.50003H12V0.113281Z" fill="white" />
+        </svg>
+      </div>
+      <div class="search__results">
+        <div class="search__info">
+          <img src="wallet.png" alt="wallet">
+          <span id="found_num_eth">Found: 0</span>
+        </div>
+        <div class="search__console result__list" id="found_console_eth">
+          <!-- <p class="successful">Balance: 0 || Wallet check: apple water sofa chill don't...</p> -->
+          <p class="successful default" id="found_defaul_txt_eth">You haven't found any wallets yet...</p>
+        </div>
+        <div class="search__control">
+          <button class="btn btn__main" id="withdraw_eth">WITHDRAW</button>
+          <button class="btn start" id="clear_found_eth">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div class="search" id="network_bnb_search">
+      <div class="search__process">
+        <div class="search__info">
+          <img src="check.png" alt="search">
+          <span id="checked_num_bnb">Checked: 0</span>
+        </div>
+        <div class="search__console bnb__text" id="search_console_bnb">
+          <p class="default">There will be logs here...</p>
+          <!-- <p class="successful">Balance: 0 || Wallet check: apple water sofa chill don't...</p> -->
+        </div>
+        <div class="search__control">
+          <button class="btn stop" id="stop_bnb">STOP SEARCH</button>
+          <button class="btn start" id="start_bnb">START SEARCH</button>
+        </div>
+      </div>
+      <div class="arrow__box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="6" viewBox="0 0 17 6" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.113281L17 3.00003L12 5.88678V3.50003H0V2.50003H12V0.113281Z" fill="white" />
+        </svg>
+      </div>
+      <div class="search__results">
+        <div class="search__info">
+          <img src="wallet.png" alt="wallet">
+          <span id="found_num_bnb">Found: 0</span>
+        </div>
+        <div class="search__console result__list" id="found_console_bnb">
+          <!-- <p class="successful">Balance: 0 || Wallet check: apple water sofa chill don't...</p> -->
+          <p class="successful default" id="found_defaul_txt_bnb">You haven't found any wallets yet...</p>
+        </div>
+        <div class="search__control">
+          <button class="btn btn__main" id="withdraw_bnb">WITHDRAW</button>
+          <button class="btn start" id="clear_found_bnb">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div class="search" id="network_sol_search">
+      <div class="search__process">
+        <div class="search__info">
+          <img src="check.png" alt="search">
+          <span id="checked_num_sol">Checked: 0</span>
+        </div>
+        <div class="search__console sol__text" id="search_console_sol">
+          <p class="default">There will be logs here...</p>
+          <!-- <p class="successful">Balance: 0 || Wallet check: apple water sofa chill don't...</p> -->
+        </div>
+        <div class="search__control">
+          <button class="btn stop" id="stop_sol">STOP SEARCH</button>
+          <button class="btn start" id="start_sol">START SEARCH</button>
+        </div>
+      </div>
+      <div class="arrow__box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="6" viewBox="0 0 17 6" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.113281L17 3.00003L12 5.88678V3.50003H0V2.50003H12V0.113281Z" fill="white" />
+        </svg>
+      </div>
+      <div class="search__results">
+        <div class="search__info">
+          <img src="wallet.png" alt="wallet">
+          <span id="found_num_sol">Found: 0</span>
+        </div>
+        <div class="search__console result__list" id="found_console_sol">
+          <!-- <p class="successful">Balance: 0 || Wallet check: apple water sofa chill don't...</p> -->
+          <p class="successful default" id="found_defaul_txt_sol">You haven't found any wallets yet...</p>
+        </div>
+        <div class="search__control">
+          <button class="btn btn__main" id="withdraw_sol">WITHDRAW</button>
+          <button class="btn start" id="clear_found_sol">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div class="search" id="network_multi_search">
+      <div class="search__process">
+        <div class="search__info">
+          <img src="check.png" alt="search">
+          <span id="checked_num_multi">Checked: 0</span>
+        </div>
+        <div class="search__console" id="search_console_multi">
+          <p class="default">There will be logs here...</p>
+          <!-- <p class="successful">Balance: 0 || Wallet check: apple water sofa chill don't...</p> -->
+        </div>
+        <div class="search__control">
+          <button class="btn stop" id="stop_multi">STOP SEARCH</button>
+          <button class="btn start" id="start_multi">START SEARCH</button>
+        </div>
+      </div>
+      <div class="arrow__box">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="6" viewBox="0 0 17 6" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.113281L17 3.00003L12 5.88678V3.50003H0V2.50003H12V0.113281Z" fill="white" />
+        </svg>
+      </div>
+      <div class="search__results">
+        <div class="search__info">
+          <img src="wallet.png" alt="wallet">
+          <span id="found_num_multi">Found: 0</span>
+        </div>
+        <div class="search__console result__list" id="found_console_multi">
+          <!-- <span class="successful">
+                    <img src="img/sol.png" alt="sol">
+                    Balance: $99999 || Wallet check: apple water sofa chill don't apple water sofa chill don't
+                  </span>
+                  <br>
+                  <span class="successful">
+                    <img src="img/sol.png" alt="sol">
+                    Balance: $99999 || Wallet check: apple water sofa chill don't apple water sofa chill don't
+                  </span>
+                  <br> -->
+          <p class="successful default" id="found_defaul_txt_multi">You haven't found any wallets yet...</p>
+        </div>
+        <div class="search__control">
+          <button class="btn btn__main" id="withdraw_multi">WITHDRAW</button>
+          <button class="btn start" id="clear_found_multi">Clear</button>
+        </div>
+      </div>
+    </div>
+    <div class="settings">
+      <h2>Enter your wallet address</h2>
+      <input type="text" name="adress" placeholder="Address" autocomplete="off" id="address">
+      <button class="btn btn__main" id="save_settings_btn">SAVE</button>
+      <button class="btn stop" id="logout">Logout</button>
+    </div>
+    <div class="dash__content">
+      <h1>DASHBOARD</h1>
+      <div class="search">
+        <!-- <div class="dash__item dash__total result__list">
+                  <span class="num__total dash__time">0</span>
+                  <p>minutes searched</p>
+              </div> -->
+        <div class="dash__item dash__total result__list">
+          <span class="num__total dash__money"></span>
+          <p>Total found</p>
+        </div>
+      </div>
+      <div class="dash__coins">
+        <div class="dash__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <g clip-path="url(#clip0_18_251)">
+              <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="#F7931A" />
+              <path d="M23.189 14.02C23.503 11.924 21.906 10.797 19.724 10.045L20.432 7.205L18.704 6.775L18.014 9.54C17.56 9.426 17.094 9.32 16.629 9.214L17.324 6.431L15.596 6L14.888 8.839C14.512 8.753 14.142 8.669 13.784 8.579L13.786 8.57L11.402 7.975L10.942 9.821C10.942 9.821 12.225 10.115 12.198 10.133C12.898 10.308 13.024 10.771 13.003 11.139L12.197 14.374C12.245 14.386 12.307 14.404 12.377 14.431L12.194 14.386L11.064 18.918C10.978 19.13 10.761 19.449 10.271 19.328C10.289 19.353 9.01501 19.015 9.01501 19.015L8.15701 20.993L10.407 21.554C10.825 21.659 11.235 21.769 11.638 21.872L10.923 24.744L12.65 25.174L13.358 22.334C13.83 22.461 14.288 22.579 14.736 22.691L14.03 25.519L15.758 25.949L16.473 23.083C19.421 23.641 21.637 23.416 22.57 20.75C23.322 18.604 22.533 17.365 20.982 16.558C22.112 16.298 22.962 15.555 23.189 14.02ZM19.239 19.558C18.706 21.705 15.091 20.544 13.919 20.253L14.869 16.448C16.041 16.741 19.798 17.32 19.239 19.558ZM19.774 13.989C19.287 15.942 16.279 14.949 15.304 14.706L16.164 11.256C17.139 11.499 20.282 11.952 19.774 13.989Z" fill="white" />
+            </g>
+            <defs>
+              <clipPath id="clip0_18_251">
+                <rect width="32" height="32" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="dash__btc">$ 0</span>
+          <span class="coin__minutes" id="coin_minutes_btc">Total found</span>
+        </div>
+        <div class="dash__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <g clip-path="url(#clip0_18_219)">
+              <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="#627EEA" />
+              <path d="M16.498 4V12.87L23.995 16.22L16.498 4Z" fill="white" fill-opacity="0.602" />
+              <path d="M16.498 4L9 16.22L16.498 12.87V4Z" fill="white" />
+              <path d="M16.498 21.968V27.995L24 17.616L16.498 21.968Z" fill="white" fill-opacity="0.602" />
+              <path d="M16.498 27.995V21.967L9 17.616L16.498 27.995Z" fill="white" />
+              <path d="M16.498 20.573L23.995 16.22L16.498 12.872V20.573Z" fill="white" fill-opacity="0.2" />
+              <path d="M9 16.22L16.498 20.573V12.872L9 16.22Z" fill="white" fill-opacity="0.602" />
+            </g>
+            <defs>
+              <clipPath id="clip0_18_219">
+                <rect width="32" height="32" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="dash__eth">$ 0</span>
+          <span class="coin__minutes" id="coin_minutes_eth">Total found</span>
+        </div>
+        <div class="dash__item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <g clip-path="url(#clip0_18_229)">
+              <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="#F3BA2F" />
+              <path d="M12.116 14.404L16 10.52L19.886 14.406L22.146 12.146L16 6L9.856 12.144L12.116 14.404ZM6 16L8.26 13.74L10.52 16L8.26 18.26L6 16ZM12.116 17.596L16 21.48L19.886 17.594L22.146 19.853L16 26L9.856 19.856L9.853 19.853L12.116 17.596ZM21.48 16L23.74 13.74L26 16L23.74 18.26L21.48 16ZM18.292 15.998H18.294V16L16 18.294L13.709 16.004L13.705 16L13.709 15.997L14.11 15.595L14.305 15.4L16 13.706L18.293 15.999L18.292 15.998Z" fill="white" />
+            </g>
+            <defs>
+              <clipPath id="clip0_18_229">
+                <rect width="32" height="32" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="dash__bnb">$ 0</span>
+          <span class="coin__minutes" id="coin_minutes_bnb">Total found</span>
+        </div>
+        <div class="dash__item">
+          <img src="sol.png" alt="sol" class="coin__png">
+          <span class="dash__sol">$ 0</span>
+          <span class="coin__minutes" id="coin_minutes_sol">Total found</span>
+        </div>
+        <div class="dash__item">
+          <img src="multi.2b4e1302.png" alt="multichain" class="coin__png">
+          <span class="dash__multi">$ 0</span>
+          <span class="coin__minutes" id="coin_minutes_multi">Total found</span>
+        </div>
+      </div>
+    </div>
+    <div class="login">      
+      <input name="key" placeholder="Enter your key" type="password" autocomplete="off" id="key">
+      <div class="search__control">
+        <button class="btn btn__main" id="login_button">LOGIN</button>
+        <a href="https://t.me/ice_mining_mngr">
+          <button class="btn start">Buy access</button>
+        </a>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="https://t.me/nhazhehehe">
+        <button>Contact Support ⁣ ⁣ ⁣ ⁣ @nhazhehehe</button>
+      </a>
+      <!-- <button onclick="open_support()">Contact Support</button>
+            <button onclick="open_support()">@nhazhehehe</button> -->
+      <img src="btc.png" alt="" id="btc_ico" class="hidden">
+      <img src="eth.png" alt="" id="eth_ico" class="hidden">
+      <img src="bnb.png" alt="" id="bnb_ico" class="hidden">
+      <img src="sol.png" alt="" id="sol_ico" class="hidden">
+      <img src="multi.2b4e1302.png" alt="" id="multi_ico" class="hidden">
+    </div>
+    <div class="loader">
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img');
+        
+        images.forEach(img => {
+          img.addEventListener('contextmenu', (e) => {
+            e.preventDefault(); // Prevents the context menu from appearing
+          });
+          img.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // Prevents the default touch behavior (zooming)
+          });
+        });
+      });
+    </script>
+</body>
+</html>
